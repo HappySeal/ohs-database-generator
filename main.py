@@ -96,7 +96,7 @@ class Collector:
 
 if __name__ == "__main__":
     user_id = input("Enter your user ID: ")
-    password = input("Enter your password: ")
+    password = getpass("Enter your password: ")
 
     bot = Collector(user_id, password)
 
