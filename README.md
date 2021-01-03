@@ -15,7 +15,7 @@ After it is finished installing, download the project to your device.
 
 If you done everything right you are ready to use the program.
 
-## Usage
+## Getting DB file
 
 Open the main.py file by double click or in a PowerShell window
 
@@ -33,6 +33,14 @@ Enter your metu password. It doesnt shows you to protect from third eyes just li
 After Completeing all of these steps main.py should generate a main.db file in the directory it is located.
 
 Upload it to the Google Form that I gave you.
+
+## Using DB files
+
+In "latest" folder you can find the latest database file I uploaded. It has over 150 questions now. You can submit your own database to expand it
+
+Before you download main.db file you have to install a [SQLite3](https://sqlitebrowser.org/) database explorer. 
+After you finish installing it you can open the program and open the main.db file.
+
 
 
 
