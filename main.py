@@ -27,7 +27,7 @@ class Collector:
         self.db.execute("CREATE TABLE IF NOT EXISTS Answer_Table (question,answer,chapter)")
 
         dbs = [d for d in os.listdir() if len(d.split(".")) == 2]
-        dbs = list(filter(lambda x: x.split(".")[1] == "db" and x.split(".")[0] != "main", dbs))
+        dbs = list(filter(lambda x: x.split(".")[1] == "db" and x.split(".")[0] != "main",dbs))
         for ddb in dbs:
             dddb = sql.connect(ddb)
             dddb_cursor = dddb.cursor()
@@ -83,7 +83,7 @@ class Collector:
                 try:
                     answer = x.find("div", {"class": "correct"}).find(class_="ml-1").text
                 except AttributeError:
-                    answer = x.find("select", {"class": "correct"}).find("option", {"selected": "selected"}).text
+                    answer = x.find("select",{"class":"correct"}).find("option",{"selected":"selected"}).text
 
                 self.a_dict[question] = answer
                 self.db_cursor.execute('SELECT * FROM Answer_Table WHERE (question=? AND answer=? AND chapter=?)',
