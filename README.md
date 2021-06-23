@@ -1,5 +1,5 @@
-# OHS DATABASE GENERATOR
-This code is written by Cafer SELLİ for non educational purposes. If I wanna to do something educational I would just learn OHS101
+# OHS DATABASE GENERATOR V2
+This code is the sequel of previously made database generator by Cafer SELLİ for non educational purposes. If I wanna to do something educational I would just learn OHS301
 
 
 ## Installation
