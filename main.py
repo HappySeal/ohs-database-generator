@@ -22,6 +22,7 @@ class Collector:
     def __init__(self, uuid, password):
         self.merge_existing_databases()
         self.mp = self.login(uuid, password)
+        print(self.s.cookies)
 
     def merge_existing_databases(self):
         self.db.execute("CREATE TABLE IF NOT EXISTS Answer_Table (question,answer,chapter)")
@@ -57,7 +58,7 @@ class Collector:
 
         self.s.get(postRQ.headers["Location"], allow_redirects=False, headers=self.headers)
 
-        mainPage = self.s.get("https://odtuclass.metu.edu.tr/course/view.php?id=5376")
+        mainPage = self.s.get("https://odtuclass.metu.edu.tr/course/view.php?id=4795")
 
         return mainPage
 
@@ -97,11 +98,12 @@ class Collector:
 
 if __name__ == "__main__":
     user_id = input("Enter your user ID: ")
-    password = getpass("Enter your password: ")
+    password = input("Enter your password: ")
 
     bot = Collector(user_id, password)
 
     for q in bot.get_quizes():
+        print(q)
         bot.get_questions(bot.get_review_link(q))
 
     print(bot.a_dict)
