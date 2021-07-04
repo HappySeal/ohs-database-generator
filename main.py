@@ -95,7 +95,6 @@ class Collector:
                                            (question, answer, chapter))
                     self.db.commit()
 
-
 if __name__ == "__main__":
     user_id = input("Enter your user ID: ")
     password = input("Enter your password: ")
